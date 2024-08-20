@@ -1,0 +1,16 @@
+[gd_scene load_steps=3 format=3 uid="uid://oaehycmkhy0x"]
+
+[ext_resource type="Texture2D" uid="uid://cl5gh16gtae8w" path="res://assets/temp sheet.png" id="1_dev15"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_hoy5s"]
+size = Vector2(9, 13)
+
+[node name="Minion" type="CharacterBody2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_dev15")
+region_enabled = true
+region_rect = Rect2(19, 3, 9, 13)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_hoy5s")

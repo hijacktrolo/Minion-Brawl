@@ -1,0 +1,20 @@
+[gd_scene load_steps=5 format=3 uid="uid://d12jn40ee5m13"]
+
+[ext_resource type="Script" path="res://scripts/character_body_2d.gd" id="1_fficx"]
+[ext_resource type="PackedScene" uid="uid://oaehycmkhy0x" path="res://scenes/minion.tscn" id="2_5e011"]
+[ext_resource type="Texture2D" uid="uid://cl5gh16gtae8w" path="res://assets/temp sheet.png" id="2_xgnb5"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_euifx"]
+size = Vector2(10, 14)
+
+[node name="CharacterBody2D" type="CharacterBody2D"]
+script = ExtResource("1_fficx")
+minion_scene = ExtResource("2_5e011")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("2_xgnb5")
+region_enabled = true
+region_rect = Rect2(1, 2, 14, 14)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_euifx")
